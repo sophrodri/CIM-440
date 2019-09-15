@@ -55,7 +55,7 @@ function draw() {
   ellipse(Xeye+160,Yeye,20,20);
 
 
-  arc(Xeye-10,Yeye+50,200,200,0,PI);
+  arc(Xeye+85,Yeye+100,200,200,0,PI);
 
 
 }// end of draw
