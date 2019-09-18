@@ -65,5 +65,7 @@ console.log("keyCode"+"keyCode");
   if(key == "s"){
     pupilColor = "magenta";}
 
+  
+
 
 }//end of keyPressed
