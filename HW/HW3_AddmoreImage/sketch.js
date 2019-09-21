@@ -2,14 +2,13 @@
 // Puppy image "puppies" by www.petian.net is licensed under CC BY-NC-ND 2.0  https://search.creativecommons.org/photos/4f271583-e45d-4faf-bfc8-7291c7c1e3c3
 // dinosaur "Rupenhorn Dinosaur #4" by Kristian_Laban is licensed under CC BY-NC 2.0 https://search.creativecommons.org/photos/96213ba5-e9b6-4f2f-91e4-da28b9fcad22
 
-var puppy, dinosaur, sloth;
+var puppy, dinosaur, sloth, palms, flower;
   // shortcut to make multile variables ^
 
-var pButton, dButton, sButton;
+var pButton, dButton, sButton, pButton, fButton;
 
 var currentImage = 0;
 //a number that corresponds to each image
-
 
 
 function preload() {
@@ -17,6 +16,9 @@ function preload() {
   puppy = loadImage("images/puppy.jpg");
   dinosaur = loadImage("images/dinosaur.jpg");
   sloth = loadImage("images/sloth.jpg");
+  palms = loadImage("images/Palms.jpg");
+  flower = loadImage("images/PinkFlower.jpg");
+
 
 }//end of PRELOAD
 
@@ -41,6 +43,15 @@ sButton.mousePressed(function(){
   currentImage = 2; // set current image to 0
 });
 
+pButton = createButton("palms");
+pButton.mousePressed(function(){
+  currentImage = 3; // set current image to 0
+});
+
+fButton = createButton("flower");
+fButton.mousePressed(function(){
+  currentImage = 4; // set current image to 0
+});
 
 }//end of SETUP
 
@@ -60,6 +71,12 @@ if(currentImage==0){
 }else if(currentImage==2){
   // show sloth
 image(sloth,0,0,sloth.width/4,sloth.height/4);
+}else if(currentImage==3){
+  //show palms
+  image(palms,0,0,palms.width/8,palms.height/8);
+}else if(currentImage==4){
+  //show flower
+  image(flower,0,0,flower.width/8,flower.height/8);
 }
 // if the image is 0 show puppy -> if not (else) if current imgage is 1, show dinosaur
 

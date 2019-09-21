@@ -10,6 +10,10 @@ var pButton, dButton, sButton;
 var currentImage = 0;
 //a number that corresponds to each image
 
+//var currentAnimal; this does not work because puppy has no value at this point of the program
+
+var currentAnimal =
+
 
 
 function preload() {
@@ -41,6 +45,7 @@ sButton.mousePressed(function(){
   currentImage = 2; // set current image to 0
 });
 
+currentAnimal = puppy; // setup in here, because puppy is not defined
 
 }//end of SETUP
 
@@ -53,15 +58,18 @@ console.log("currentImage" + currentImage);
 
 if(currentImage==0){
   //show puppy
-  image(puppy,0,0,puppy.width/4,puppy.height/4);
+  currentAnimal = puppy;
+
 }else if(currentImage==1){
   //show dinosaur
-  image(dinosaur,0,0,dinosaur.width/4,dinosaur.height/4);
+  currentAnimal= dinosaur;
+
 }else if(currentImage==2){
   // show sloth
-image(sloth,0,0,sloth.width/4,sloth.height/4);
+  currentAnimal= sloth;
 }
 // if the image is 0 show puppy -> if not (else) if current imgage is 1, show dinosaur
 
+image(currentAnimal,0,0,currentAnimal.width/4,currentAnimal.height/4);
 
 }//end of DRAW
