@@ -12,7 +12,7 @@ var currentImage = 0;
 
 //var currentAnimal; this does not work because puppy has no value at this point of the program
 
-var currentAnimal =
+
 
 
 
@@ -46,6 +46,7 @@ sButton.mousePressed(function(){
 });
 
 currentAnimal = puppy; // setup in here, because puppy is not defined
+// Current animal is supposed to cut down the line of cold so that you dont have to type the WHOLE image file in Code.
 
 }//end of SETUP
 
@@ -62,11 +63,11 @@ if(currentImage==0){
 
 }else if(currentImage==1){
   //show dinosaur
-  currentAnimal= dinosaur;
+  currentAnimal = dinosaur;
 
 }else if(currentImage==2){
   // show sloth
-  currentAnimal= sloth;
+  currentAnimal = sloth;
 }
 // if the image is 0 show puppy -> if not (else) if current imgage is 1, show dinosaur
 
