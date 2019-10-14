@@ -5,7 +5,6 @@ var sunX = 0;
 var sunY = 0;
 
 
-
 function setup() {
   // put setup code here
   createCanvas(400,400);
@@ -32,7 +31,7 @@ function draw() {
   // put drawing code here
 background(255);
 
-if(seasonType == "fall"){
+if(seasonType == "fall") {
   console.log("fall");
 }else if (seasonType == "winter") {
   console.log("winter");
@@ -47,12 +46,14 @@ if(seasonType == "fall"){
 
 if(sunY > height){
     sunY = sunY - 1;
-  }// stopping the sun
+  }
+
 }else{
     console.log("blank")
     text("Make a selection", 100,20);
 }
 
+// if sunY is greater than the height of the canvas, the sun stops.
 
 
 }// end of DRAW

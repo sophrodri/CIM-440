@@ -100,7 +100,7 @@ if(startTimer == true){
   //reset to Inactive State
   currentOption = -1;
   startTimer = true;
-  prevMillis = millis; // whenever user makes a selection, THEN u start the timer.
+  prevMillis = millis(); // whenever user makes a selection, THEN u start the timer.
     // wait for the user to make a selection .. user makes a selection .. then the program will wait for THE NEW response again, for the new question.
 
 

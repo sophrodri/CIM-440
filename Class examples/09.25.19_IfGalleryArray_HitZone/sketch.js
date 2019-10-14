@@ -27,10 +27,10 @@ function preload() {
   imageArray[0] = loadImage("images/puppy.jpg");
   imageArray[1] = loadImage("images/dinosaur.jpg");
   imageArray[2] = loadImage("images/sloth.jpg");
-  imageArray[3] = loadImage("images/Palms.jpg");
-  imageArray[4] = loadImage("images/PinkFlower.jpg");
-  imageArray[5] = loadImage("images/bird.jpg");
-  imageArray[6] = loadImage("images/forest.jpeg")
+  //imageArray[3] = loadImage("images/Palms.jpg");
+  //imageArray[4] = loadImage("images/PinkFlower.jpg");
+  //imageArray[5] = loadImage("images/bird.jpg");
+  //imageArray[6] = loadImage("images/forest.jpeg")
 
 }//end of PRELOAD
 
@@ -71,15 +71,15 @@ function mousePressed(){
   }// end of button Hitzone 1
 
 
-  if(mouseX > hitX[1] && mouseX < hitX[1]+hitSize && mouseY > hitY[1] && mouseY < hitY[1] + hitSize){
+  //if(mouseX > hitX[1] && mouseX < hitX[1]+hitSize && mouseY > hitY[1] && mouseY < hitY[1] + hitSize){
     // left hand and right hand boundary
-  console.log("Button 1")
-  currentImage = currentImage - 1;
+  //console.log("Button 1")
+//  currentImage = currentImage - 1;
 
   // if we know we need to cycle throuh the indices, what would we do to currentImage. Add currentImage+1
 // there can be no -1 indices
-    if(currentImage == -1){
-      currentImage = 6;
+    //if(currentImage == -1){
+      //currentImage = 6;
 
     }// end of CurrentImage == 0
   }// end of button Hitzone 2

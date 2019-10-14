@@ -21,8 +21,10 @@ if(millis() - prevMillis > interval) {
   counter = counter + 1;
   console.log(counter);
 
-  //if millis is 0, (0-0=0) is that greater than our interval? NO
-    //once hits 1001, this becomes true and prevMillus is subtracted by until the newMillus reaches 2002 > 1000 (inteval)
+  // Millis is the continuous clock. PrevMillis is what counts Millus, and what is needed to count the clock to then do an action
+    // if Millus becomes 1001, 1001 becomes prevMillis, and Millis keeps going until (millus() - prevMillis > interval) becomes true.
+      // 2002 - 1001 = 1001. 1001 > 1000. Then it repeats itself for the next second. 2043 - 2002 > 1000. 
+
 
 }//end of IF
 
