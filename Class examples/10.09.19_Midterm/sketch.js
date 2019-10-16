@@ -48,6 +48,7 @@ var BrowseButtonSizeH = 60;
 var interval = 1000;
 prevMillis = 0;
 var startTimer = false;
+var millisCounter = 0;
 
 
 function preload(){
@@ -105,6 +106,13 @@ console.log("currentBottom" + currentBottom);
     if(dressMe == true){
       if(currentTop == 0 && currentBottom == 2) {
          console.log("Outfit1");
+         fill("gray");
+         strokeWeight(10);
+         rect(200, 200, 300, 100);
+         textSize(27);
+         noStroke();
+         fill("black");
+         text("Match! Click to restart", 220,260);
 
        }else if (currentTop == 0 && currentBottom == 0) {
          console.log("Outfit2");
@@ -147,15 +155,7 @@ console.log("currentBottom" + currentBottom);
        text("Match! Click to restart", 220,260);
 
 
-       }else if (currentTop == 0 && currentBottom == 2) {
-      console.log("Outfit6");
-      fill("gray");
-      strokeWeight(10);
-      rect(200, 200, 300, 100);
-      textSize(27);
-      noStroke();
-      fill("black");
-      text("Match! Click to restart", 220,260);
+
 
     }else{
       console.log("MisMatch")
@@ -171,15 +171,20 @@ console.log("currentBottom" + currentBottom);
 
     if(browse == true){
     //var startTimer = true;}
-    startTimer = true;
+
     if(millis()-prevMillis > interval){
     prevMillis = millis();
-    Math.floor(random(0,TopArray.length));
-    Math.floor(random(0,BottomArray.lenght));
-    } else if(prevMillis==10000){
-    startTimer = false;
-    console.log("Timer ended");
-  }
+    currentTop = Math.floor(random(0,TopArray.length));
+    currentBottom = Math.floor(random(0,BottomArray.length));
+    millisCounter++; //millisCounter = millisCounter + 1;
+    }
+
+    if(millisCounter == 10){
+      browse = false;
+      millisCounter = 0;
+
+    }
+
 }// end of browse
 
 
@@ -234,6 +239,8 @@ if(mouseX > hitX2[1] && mouseX < hitX2[1] + hitSize && mouseY > hitY2[1] && mous
         console.log("BrowseButton");
 
         browse = true;
+        prevMillis = millis();
+
 
       }// end of IF 5
 
