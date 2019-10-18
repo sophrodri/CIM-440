@@ -9,6 +9,7 @@
 
 //Black Leather skirt - https://www.o-mighty.com/products/157/all/9764
 
+//hanger: https://kewlgifs4u.tumblr.com/post/27542334812
 
 var currentTop = 0;
 
@@ -17,6 +18,13 @@ var currentBottom = 0;
 var TopArray = [];
 
 var BottomArray = [];
+
+//Opening slide
+var OpenHitX = [100];
+var OpenHitY = [100];
+var OpenSize = 700;
+
+var OpenWindow = false;
 
 // top buttons
 var hitX = [200,447];
@@ -33,7 +41,7 @@ var dressMe = false;
 var hitX3 = [500];
 var hitY3 = [405];
 
-var DressMeSizeW = 150;
+var DressMeSizeW = 170;
 var DressMeSizeH = 60;
 
 // Browse button
@@ -50,6 +58,15 @@ prevMillis = 0;
 var startTimer = false;
 var millisCounter = 0;
 
+// added style links
+var font;
+
+var gifRainbow;
+
+var clulessLogo;
+
+var hangers;
+
 
 function preload(){
 
@@ -61,30 +78,62 @@ function preload(){
   BottomArray[2] = loadImage("Images/PlaidSkirt.png")
   BottomArray[3] = loadImage("Images/TigerBottom.png")
 
-}// end of Preload
+  font = loadFont("ChargenFont/6809 chargen.ttf")
+  gifRainbow = loadImage("vhstape.gif")
+  cluelessLogo = loadImage("cluelesslogo.png")
+  hangers = loadImage("hangers.gif")
+
+
+} // end of Preload
 
 
 function setup() {
   // put setup code here
   createCanvas(700,530)
+  textFont(font);
+
+
 }// end of SETUP
 
+
 function draw() {
-  // put drawing code here
-background("pink");
 
-stroke("grey");
-strokeWeight(10);
-fill("white");
-rect(200, 70, 297, 390);
+    // opening Window
+    fill("white");
+    rect(OpenHitX[0],OpenHitY[0],OpenSize,OpenSize);
+    image(hangers,0,0,hangers.width*2,hangers.height*2);
 
-console.log("currentTop" + currentTop);
-console.log("currentBottom" + currentBottom);
+    fill("white");
+    textSize(50);
+    text("Welcome",100,150);
+    text("to the",100,250);
+    text("Clueless Closet...",100,350);
 
-  image(TopArray[currentTop],250,75,TopArray[currentTop].width/4,TopArray[currentTop].height/4);
-  image(BottomArray[currentBottom],250,250,BottomArray[currentBottom].width/4,BottomArray[currentBottom].height/4);
+    fill("light pink");
+    textSize(30);
+    text("Click anywhere to start",100,400);
 
-  strokeWeight(1);
+
+if(OpenWindow == true){
+    //var startTimer = true;}
+
+    image(gifRainbow,0,0,gifRainbow.width*2,gifRainbow.height*2);
+    image(cluelessLogo,250,-5,cluelessLogo.width/2,cluelessLogo.height/2);
+    image(cluelessLogo,250,460,cluelessLogo.width/2,cluelessLogo.height/2);
+
+//background gray window
+    stroke("grey");
+    strokeWeight(10);
+    fill("white");
+    rect(200, 70, 297, 390);
+
+    console.log("currentTop" + currentTop);
+    console.log("currentBottom" + currentBottom);
+
+    image(TopArray[currentTop],250,75,TopArray[currentTop].width/4,TopArray[currentTop].height/4);
+    image(BottomArray[currentBottom],250,250,BottomArray[currentBottom].width/4,BottomArray[currentBottom].height/4);
+
+    strokeWeight(1);
     stroke(0);
     fill(211,211,211);
     rect(hitX[0],hitY[0],hitSize,hitSize);
@@ -97,77 +146,87 @@ console.log("currentBottom" + currentBottom);
     rect(hitX3[0],hitY3[0],DressMeSizeW,DressMeSizeH);
     rect(hitX4[0],hitY4[0],BrowseButtonSizeW,BrowseButtonSizeH);
 
-    textSize(32);
+    textSize(30);
     fill(0);
-    text("Dress Me", 505, 445);
-    text("Browse", 70, 445);
-
+    text("Dress Me", 510, 445);
+    text("Browse", 60, 445);
 
     if(dressMe == true){
       if(currentTop == 0 && currentBottom == 2) {
          console.log("Outfit1");
-         fill("gray");
+         fill(192, 255, 0);
          strokeWeight(10);
-         rect(200, 200, 300, 100);
-         textSize(27);
+         rect(150, 200, 400, 100);
+         textSize(40);
          noStroke();
          fill("black");
-         text("Match! Click to restart", 220,260);
+         text("Match!", 270,250);
+         textSize(20);
+         text("Click an arrow to restart.", 200,270);
 
        }else if (currentTop == 0 && currentBottom == 0) {
          console.log("Outfit2");
-         fill("gray");
+         fill(192, 255, 0);
          strokeWeight(10);
-         rect(200, 200, 300, 100);
-         textSize(27);
+         rect(150, 200, 400, 100);
+         textSize(40);
          noStroke();
          fill("black");
-         text("Match! Click to restart", 220,260);
+         text("Match!", 270,250);
+         textSize(20);
+         text("Click an arrow to restart.", 200,270);
 
        }else if (currentTop == 1 && currentBottom == 3) {
          console.log("Outfit3");
-         fill("gray");
+         fill(192, 255, 0);
          strokeWeight(10);
-         rect(200, 200, 300, 100);
-         textSize(27);
+         rect(150, 200, 400, 100);
+         textSize(40);
          noStroke();
          fill("black");
-         text("Match! Click to restart", 220,260);
+         text("Match!", 270,250);
+         textSize(20);
+         text("Click an arrow to restart.", 200,270);
 
        }else if (currentTop == 2 && currentBottom == 0) {
         console.log("Outfit4");
-        fill("gray");
+        fill(192, 255, 0);
         strokeWeight(10);
-        rect(200, 200, 300, 100);
-        textSize(27);
+        rect(150, 200, 400, 100);
+        textSize(40);
         noStroke();
         fill("black");
-        text("Match! Click to restart", 220,260);
+        text("Match!", 270,250);
+        textSize(20);
+        text("Click an arrow to restart.", 200,270);
 
         }else if (currentTop == 2 && currentBottom == 1) {
        console.log("Outfit5");
-       fill("gray");
+       fill(192, 255, 0);
        strokeWeight(10);
-       rect(200, 200, 300, 100);
-       textSize(27);
+       rect(150, 200, 400, 100);
+       textSize(40);
        noStroke();
        fill("black");
-       text("Match! Click to restart", 220,260);
-
-
+       text("Match!", 270,250);
+       textSize(20);
+       text("Click an arrow to restart.", 200,270);
 
 
     }else{
-      console.log("MisMatch")
-      fill("gray");
+
+      fill("red");
       strokeWeight(10);
-      rect(175, 200, 400, 100);
-      textSize(27);
+      rect(150, 200, 400, 100);
+      textSize(40);
       noStroke();
-      fill("black");
-      text("MisMatch! Click arrows to try again", 175,260);
+      fill("white");
+      text("MisMatch!", 240,250);
+      textSize(20);
+      text("Click an arrow to restart.", 205,270);
+
     }
-    }
+  }// end of IF
 
     if(browse == true){
     //var startTimer = true;}
@@ -187,11 +246,20 @@ console.log("currentBottom" + currentBottom);
 
 }// end of browse
 
-
+}// end of If Open Window
 }// end of DRAW
 
 //
 function mousePressed(){
+
+  if(mouseX > OpenHitX[0] && mouseX < OpenHitX[0] + OpenSize && mouseY > OpenHitY[0] && mouseY < OpenHitY[0] + OpenSize){
+  console.log("Click to Closet");
+  OpenWindow = true;
+  }
+
+
+
+
   if(mouseX > hitX[0] && mouseX < hitX[0] + hitSize && mouseY > hitY[0] && mouseY < hitY[0] + hitSize){
     console.log("Button 0");
     currentTop = currentTop - 1;
@@ -243,6 +311,8 @@ if(mouseX > hitX2[1] && mouseX < hitX2[1] + hitSize && mouseY > hitY2[1] && mous
 
 
       }// end of IF 5
+
+
 
 
 }// end of MousePressed
