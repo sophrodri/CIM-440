@@ -213,7 +213,7 @@ if(OpenWindow == true){
        text("Click an arrow to restart.", 200,270);
 
 
-    }else{
+      }else{
 
       fill("red");
       strokeWeight(10);
