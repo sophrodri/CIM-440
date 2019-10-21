@@ -6,10 +6,7 @@
   //white tank - https://www.o-mighty.com/products/211/all/11477
   //pink skirt - https://www.o-mighty.com/products/208/all/10687
   //Black Leather skirt - https://www.o-mighty.com/products/157/all/9764
-
-//Backgrounds used
   //hanger: https://kewlgifs4u.tumblr.com/post/27542334812
-  //
 
 var currentTop = 0;
 
@@ -20,7 +17,7 @@ var TopArray = [];
 var BottomArray = [];
 
 //Opening slide
-var OpenHitX = [100];
+var OpenHitX = [0];
 var OpenHitY = [100];
 var OpenSize = 700;
 
@@ -92,7 +89,7 @@ function preload(){
   font = loadFont("ChargenFont/6809 chargen.ttf")
   leopardPng = loadImage("Images/LeopardPrint.png")
   cluelessLogo = loadImage("cluelesslogo.png")
-  hangers = loadImage("hangers.gif")
+
 
 
 } // end of Preload
@@ -106,35 +103,62 @@ function setup() {
 
 }// end of SETUP
 
+function circleColor(xpos, ypos, r,g,b, cSize){
+// working with shapes. Make sure that the name doesnt match with a variable/other function.
+// make it easier to draw a bunch of circles onto the screen.
+  fill(r,g,b);
+  ellipse(xpos, ypos, cSize, cSize);
+}
 
 function draw() {
 
     // opening Window
-    fill("white");
-    rect(OpenHitX[0],OpenHitY[0],OpenSize,OpenSize);
-    image(hangers,0,0,hangers.width*2,hangers.height*2);
+    background(255);
 
+
+
+
+    noStroke();
+    rect(0,0,700,530);
+    for(var i = 0; i < 10000; i++){
+   circleColor(random(width), random(height), random(255), random(255), random(255), random(0,1));
+   stroke(0);
+   strokeWeight(1);
+    // cant slow it down with frameRate because the entire interaction slows down. It affects everything. MousePressed etc\
+    // use millus to slow down the framerate
+
+    }// end of FOR loop
+
+    stroke(0);
+    strokeWeight(5);
     textSize(50);
     fill("white");
-    text("Welcome",100,150);
-    text("to the",100,250);
+    text("Welcome",100,130);
+    text("to the",100,180);
 
-
+    image(cluelessLogo,100,190,cluelessLogo.width,cluelessLogo.height);
     fill("pink");
-    text("Clueless Closet...",100,350);
+    text("Closet...",100,370);
 
     fill("light pink");
     textSize(30);
     text("Click anywhere to start",100,400);
 
+    strokeWeight(100);
+    stroke(207, 185, 151);
+    noFill();
+    rect(0,0,700,530);
 
 
 if(OpenWindow == true){
     //var startTimer = true;}
 
     image(leopardPng,0,0,leopardPng.width,leopardPng.height);
-    image(cluelessLogo,250,-5,cluelessLogo.width/2,cluelessLogo.height/2);
-    image(cluelessLogo,250,460,cluelessLogo.width/2,cluelessLogo.height/2);
+    noStroke();
+    fill(211,211,211);
+    rect(0,0,700,40);
+  //  image(cluelessLogo,250,-5,cluelessLogo.width/2,cluelessLogo.height/2);
+  //  image(cluelessLogo,250,460,cluelessLogo.width/2,cluelessLogo.height/2);
 
 //background gray window
     stroke("grey");
@@ -150,13 +174,11 @@ if(OpenWindow == true){
 
     strokeWeight(1);
     stroke(0);
-    fill(211,211,211);
+    fill(173, 216, 230);
     rect(hitX[0],hitY[0],hitSize,hitSize);
     rect(hitX[1],hitY[1],hitSize,hitSize);
     rect(hitX2[0],hitY2[0],hitSize,hitSize);
     rect(hitX2[1],hitY2[1],hitSize,hitSize);
-    fill(0);
-    triangle(30, 75, 58, 20, 86, 75);
 
     fill(211,211,211);
     rect(hitX3[0],hitY3[0],DressMeSizeW,DressMeSizeH);
@@ -178,7 +200,7 @@ if(OpenWindow == true){
          fill("black");
          text("Match!", 270,250);
          textSize(20);
-         text("Click an arrow to restart.", 200,270);
+         text("Click a blue square to restart.", 180,270);
 
        }else if (currentTop == 0 && currentBottom == 0) {
          console.log("Outfit2");
@@ -190,7 +212,7 @@ if(OpenWindow == true){
          fill("black");
          text("Match!", 270,250);
          textSize(20);
-         text("Click an arrow to restart.", 200,270);
+         text("Click a blue square to restart.", 180,270);
 
        }else if (currentTop == 1 && currentBottom == 3) {
          console.log("Outfit3");
@@ -202,7 +224,7 @@ if(OpenWindow == true){
          fill("black");
          text("Match!", 270,250);
          textSize(20);
-         text("Click an arrow to restart.", 200,270);
+         text("Click a blue square to restart.", 180,270);
 
        }else if (currentTop == 2 && currentBottom == 0) {
         console.log("Outfit4");
@@ -214,7 +236,7 @@ if(OpenWindow == true){
         fill("black");
         text("Match!", 270,250);
         textSize(20);
-        text("Click an arrow to restart.", 200,270);
+        text("Click a blue square to restart.", 180,270);
 
         }else if (currentTop == 2 && currentBottom == 1) {
        console.log("Outfit5");
@@ -226,7 +248,7 @@ if(OpenWindow == true){
        fill("black");
        text("Match!", 270,250);
        textSize(20);
-       text("Click an arrow to restart.", 200,270);
+       text("Click a blue square to restart.", 180,270);
 
      }else if (currentTop == 3 && currentBottom == 4) {
       console.log("Outfit5");
@@ -238,7 +260,7 @@ if(OpenWindow == true){
       fill("black");
       text("Match!", 270,250);
       textSize(20);
-      text("Click an arrow to restart.", 200,270);
+      text("Click a blue square to restart.", 180,270);
 
     }else if (currentTop == 2 && currentBottom == 6) {
      console.log("Outfit5");
@@ -250,7 +272,7 @@ if(OpenWindow == true){
      fill("black");
      text("Match!", 270,250);
      textSize(20);
-     text("Click an arrow to restart.", 200,270);
+     text("Click a blue square to restart.", 180,270);
 
 
    }else if (currentTop == 5 && currentBottom == 7) {
@@ -263,7 +285,7 @@ if(OpenWindow == true){
       fill("black");
       text("Match!", 270,250);
       textSize(20);
-      text("Click an arrow to restart.", 200,270);
+      ttext("Click a blue square to restart.", 180,270);
 
     }else if (currentTop == 4 && currentBottom == 6) {
        console.log("Outfit5");
@@ -275,7 +297,7 @@ if(OpenWindow == true){
        fill("black");
        text("Match!", 270,250);
        textSize(20);
-       text("Click an arrow to restart.", 200,270);
+       text("Click a blue square to restart.", 180,270);
 
      }else if (currentTop == 5 && currentBottom == 6) {
         console.log("Outfit5");
@@ -287,8 +309,7 @@ if(OpenWindow == true){
         fill("black");
         text("Match!", 270,250);
         textSize(20);
-        text("Click an arrow to restart.", 200,270);
-
+        text("Click a blue square to restart.", 180,270);
 
 
 
@@ -302,7 +323,7 @@ if(OpenWindow == true){
       fill("white");
       text("MisMatch!", 240,250);
       textSize(20);
-      text("Click an arrow to restart.", 205,270);
+      text("Click a blue square to restart.", 180,270);
 
     }
   }// end of IF
