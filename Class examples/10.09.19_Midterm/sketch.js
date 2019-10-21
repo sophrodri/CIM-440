@@ -1,15 +1,15 @@
+//Pictures taken from o-mighty.com
 
-//Tiger top and bottom - https://www.o-mighty.com/products/213/all/10864
+  //Tiger top and bottom - https://www.o-mighty.com/products/213/all/10864
+  //Red Chain skirt - https://www.o-mighty.com/products/157/all/9504
+  //Red Top - https://www.o-mighty.com/products/211/all/11019
+  //white tank - https://www.o-mighty.com/products/211/all/11477
+  //pink skirt - https://www.o-mighty.com/products/208/all/10687
+  //Black Leather skirt - https://www.o-mighty.com/products/157/all/9764
 
-//Red Chain skirt - https://www.o-mighty.com/products/157/all/9504
-//Red Top - https://www.o-mighty.com/products/211/all/11019
-
-//white tank - https://www.o-mighty.com/products/211/all/11477
-//pink skirt - https://www.o-mighty.com/products/208/all/10687
-
-//Black Leather skirt - https://www.o-mighty.com/products/157/all/9764
-
-//hanger: https://kewlgifs4u.tumblr.com/post/27542334812
+//Backgrounds used
+  //hanger: https://kewlgifs4u.tumblr.com/post/27542334812
+  //
 
 var currentTop = 0;
 
@@ -61,7 +61,7 @@ var millisCounter = 0;
 // added style links
 var font;
 
-var gifRainbow;
+var leopardPng;
 
 var clulessLogo;
 
@@ -73,13 +73,24 @@ function preload(){
   TopArray[0] = loadImage("Images/RedTop.png")
   TopArray[1] = loadImage("Images/TigerTop.png")
   TopArray[2] = loadImage("Images/WhiteTank.png")
+  TopArray[3] = loadImage("Images/AngelTop.png")
+  TopArray[4] = loadImage("Images/bluetop.png")
+  TopArray[5] = loadImage("Images/YellowSquareTop.png")
+
+
   BottomArray[0] = loadImage("Images/LeatherBottom.png")
   BottomArray[1] = loadImage("Images/PinkSkirt.png")
   BottomArray[2] = loadImage("Images/PlaidSkirt.png")
   BottomArray[3] = loadImage("Images/TigerBottom.png")
+  BottomArray[4] = loadImage("Images/AngelSkirt.png")
+  BottomArray[5] = loadImage("Images/BurberrySkirt.png")
+  BottomArray[6] = loadImage("Images/whitepants.png")
+  BottomArray[7] = loadImage("Images/YellowSquareSkirt.png")
+
+
 
   font = loadFont("ChargenFont/6809 chargen.ttf")
-  gifRainbow = loadImage("vhstape.gif")
+  leopardPng = loadImage("Images/LeopardPrint.png")
   cluelessLogo = loadImage("cluelesslogo.png")
   hangers = loadImage("hangers.gif")
 
@@ -103,10 +114,13 @@ function draw() {
     rect(OpenHitX[0],OpenHitY[0],OpenSize,OpenSize);
     image(hangers,0,0,hangers.width*2,hangers.height*2);
 
-    fill("white");
     textSize(50);
+    fill("white");
     text("Welcome",100,150);
     text("to the",100,250);
+
+
+    fill("pink");
     text("Clueless Closet...",100,350);
 
     fill("light pink");
@@ -114,10 +128,11 @@ function draw() {
     text("Click anywhere to start",100,400);
 
 
+
 if(OpenWindow == true){
     //var startTimer = true;}
 
-    image(gifRainbow,0,0,gifRainbow.width*2,gifRainbow.height*2);
+    image(leopardPng,0,0,leopardPng.width,leopardPng.height);
     image(cluelessLogo,250,-5,cluelessLogo.width/2,cluelessLogo.height/2);
     image(cluelessLogo,250,460,cluelessLogo.width/2,cluelessLogo.height/2);
 
@@ -140,7 +155,8 @@ if(OpenWindow == true){
     rect(hitX[1],hitY[1],hitSize,hitSize);
     rect(hitX2[0],hitY2[0],hitSize,hitSize);
     rect(hitX2[1],hitY2[1],hitSize,hitSize);
-
+    fill(0);
+    triangle(30, 75, 58, 20, 86, 75);
 
     fill(211,211,211);
     rect(hitX3[0],hitY3[0],DressMeSizeW,DressMeSizeH);
@@ -212,6 +228,69 @@ if(OpenWindow == true){
        textSize(20);
        text("Click an arrow to restart.", 200,270);
 
+     }else if (currentTop == 3 && currentBottom == 4) {
+      console.log("Outfit5");
+      fill(192, 255, 0);
+      strokeWeight(10);
+      rect(150, 200, 400, 100);
+      textSize(40);
+      noStroke();
+      fill("black");
+      text("Match!", 270,250);
+      textSize(20);
+      text("Click an arrow to restart.", 200,270);
+
+    }else if (currentTop == 2 && currentBottom == 6) {
+     console.log("Outfit5");
+     fill(192, 255, 0);
+     strokeWeight(10);
+     rect(150, 200, 400, 100);
+     textSize(40);
+     noStroke();
+     fill("black");
+     text("Match!", 270,250);
+     textSize(20);
+     text("Click an arrow to restart.", 200,270);
+
+
+   }else if (currentTop == 5 && currentBottom == 7) {
+      console.log("Outfit5");
+      fill(192, 255, 0);
+      strokeWeight(10);
+      rect(150, 200, 400, 100);
+      textSize(40);
+      noStroke();
+      fill("black");
+      text("Match!", 270,250);
+      textSize(20);
+      text("Click an arrow to restart.", 200,270);
+
+    }else if (currentTop == 4 && currentBottom == 6) {
+       console.log("Outfit5");
+       fill(192, 255, 0);
+       strokeWeight(10);
+       rect(150, 200, 400, 100);
+       textSize(40);
+       noStroke();
+       fill("black");
+       text("Match!", 270,250);
+       textSize(20);
+       text("Click an arrow to restart.", 200,270);
+
+     }else if (currentTop == 5 && currentBottom == 6) {
+        console.log("Outfit5");
+        fill(192, 255, 0);
+        strokeWeight(10);
+        rect(150, 200, 400, 100);
+        textSize(40);
+        noStroke();
+        fill("black");
+        text("Match!", 270,250);
+        textSize(20);
+        text("Click an arrow to restart.", 200,270);
+
+
+
 
       }else{
 
@@ -264,7 +343,7 @@ function mousePressed(){
     console.log("Button 0");
     currentTop = currentTop - 1;
     if(currentTop == -1){
-      currentTop = 2;
+      currentTop = 5;
     }
     dressMe = false;
   }// end of if 1
@@ -272,7 +351,7 @@ function mousePressed(){
   if(mouseX > hitX[1] && mouseX < hitX[1] + hitSize && mouseY > hitY[1] && mouseY < hitY[1] + hitSize){
       console.log("Button 1");
       currentTop = currentTop + 1
-    if(currentTop == 3){
+    if(currentTop == 6){
       currentTop = 0;
     }
     dressMe = false;
@@ -282,7 +361,7 @@ function mousePressed(){
       console.log("Button 3");
       currentBottom = currentBottom - 1;
       if(currentBottom == -1){
-        currentBottom = 3;
+        currentBottom = 7;
       }
     dressMe = false;
 }// end of IF 3
@@ -290,7 +369,7 @@ function mousePressed(){
 if(mouseX > hitX2[1] && mouseX < hitX2[1] + hitSize && mouseY > hitY2[1] && mouseY < hitY2[1] + hitSize){
     console.log("Button 4");
     currentBottom = currentBottom + 1;
-    if(currentBottom == 4){
+    if(currentBottom == 8){
       currentBottom = 0;
     }
     dressMe = false;
@@ -311,8 +390,5 @@ if(mouseX > hitX2[1] && mouseX < hitX2[1] + hitSize && mouseY > hitY2[1] && mous
 
 
       }// end of IF 5
-
-
-
 
 }// end of MousePressed
