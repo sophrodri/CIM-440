@@ -63,8 +63,6 @@ var leopardPng;
 
 var clulessLogo;
 
-var hangers;
-
 
 function preload(){
 
@@ -72,7 +70,7 @@ function preload(){
   TopArray[1] = loadImage("Images/TigerTop.png")
   TopArray[2] = loadImage("Images/WhiteTank.png")
   TopArray[3] = loadImage("Images/AngelTop.png")
-  TopArray[4] = loadImage("Images/bluetop.png")
+  TopArray[4] = loadImage("Images/BlueTop.png")
   TopArray[5] = loadImage("Images/YellowSquareTop.png")
 
 
@@ -82,14 +80,15 @@ function preload(){
   BottomArray[3] = loadImage("Images/TigerBottom.png")
   BottomArray[4] = loadImage("Images/AngelSkirt.png")
   BottomArray[5] = loadImage("Images/BurberrySkirt.png")
-  BottomArray[6] = loadImage("Images/whitepants.png")
+  BottomArray[6] = loadImage("Images/WhitePants.png")
   BottomArray[7] = loadImage("Images/YellowSquareSkirt.png")
+  BottomArray[8] = loadImage("Images/YellowSkirt.png")
 
 
 
   font = loadFont("ChargenFont/6809 chargen.ttf")
   leopardPng = loadImage("Images/LeopardPrint.png")
-  cluelessLogo = loadImage("cluelesslogo.png")
+  cluelessLogo = loadImage("Images/cluelesslogo.png")
 
 
 
@@ -239,7 +238,7 @@ if(OpenWindow == true){
        text("Click a blue square to restart.", 550,560);
 
      }else if (currentTop == 3 && currentBottom == 4) {
-      console.log("Outfit5");
+      console.log("Outfit6");
       fill(192, 255, 0);
       strokeWeight(10);
       rect(475, 400, 1000, 200);
@@ -252,7 +251,7 @@ if(OpenWindow == true){
 
 
     }else if (currentTop == 2 && currentBottom == 6) {
-     console.log("Outfit5");
+     console.log("Outfit7");
      fill(192, 255, 0);
      strokeWeight(10);
      rect(475, 400, 1000, 200);
@@ -265,7 +264,7 @@ if(OpenWindow == true){
 
 
    }else if (currentTop == 5 && currentBottom == 7) {
-      console.log("Outfit5");
+      console.log("Outfit8");
       fill(192, 255, 0);
       strokeWeight(10);
       rect(475, 400, 1000, 200);
@@ -277,7 +276,7 @@ if(OpenWindow == true){
       text("Click a blue square to restart.", 550,560);
 
     }else if (currentTop == 4 && currentBottom == 6) {
-       console.log("Outfit5");
+       console.log("Outfit9");
        fill(192, 255, 0);
        strokeWeight(10);
        rect(475, 400, 1000, 200);
@@ -289,7 +288,7 @@ if(OpenWindow == true){
        text("Click a blue square to restart.", 550,560);
 
      }else if (currentTop == 5 && currentBottom == 6) {
-        console.log("Outfit5");
+        console.log("Outfit10");
         fill(192, 255, 0);
         strokeWeight(10);
         rect(475, 400, 1000, 200);
@@ -300,8 +299,89 @@ if(OpenWindow == true){
         textSize(50);
         text("Click a blue square to restart.", 550,560);
 
+      }else if (currentTop == 1 && currentBottom == 6) {
+         console.log("Outfit11");
+         fill(192, 255, 0);
+         strokeWeight(10);
+         rect(475, 400, 1000, 200);
+         textSize(95);
+         noStroke();
+         fill("black");
+         text("Match!", 800,510);
+         textSize(50);
+         text("Click a blue square to restart.", 550,560);
 
+      }else if (currentTop == 5 && currentBottom == 8) {
+          console.log("Outfit12");
+          fill(192, 255, 0);
+          strokeWeight(10);
+          rect(475, 400, 1000, 200);
+          textSize(95);
+          noStroke();
+          fill("black");
+          text("Match!", 800,510);
+          textSize(50);
+          text("Click a blue square to restart.", 550,560);
 
+      }else if (currentTop == 1 && currentBottom == 0) {
+            console.log("Outfit13");
+            fill(192, 255, 0);
+            strokeWeight(10);
+            rect(475, 400, 1000, 200);
+            textSize(95);
+            noStroke();
+            fill("black");
+            text("Match!", 800,510);
+            textSize(50);
+            text("Click a blue square to restart.", 550,560);
+
+      }else if (currentTop == 2 && currentBottom == 4) {
+              console.log("Outfit14");
+              fill(192, 255, 0);
+              strokeWeight(10);
+              rect(475, 400, 1000, 200);
+              textSize(95);
+              noStroke();
+              fill("black");
+              text("Match!", 800,510);
+              textSize(50);
+              text("Click a blue square to restart.", 550,560);
+
+      }else if (currentTop == 3 && currentBottom == 0) {
+                    console.log("Outfit15");
+                    fill(192, 255, 0);
+                    strokeWeight(10);
+                    rect(475, 400, 1000, 200);
+                    textSize(95);
+                    noStroke();
+                    fill("black");
+                    text("Match!", 800,510);
+                    textSize(50);
+                    text("Click a blue square to restart.", 550,560);
+
+                  }else if (currentTop == 4 && currentBottom == 0) {
+                          console.log("Outfit16");
+                          fill(192, 255, 0);
+                          strokeWeight(10);
+                          rect(475, 400, 1000, 200);
+                          textSize(95);
+                          noStroke();
+                          fill("black");
+                          text("Match!", 800,510);
+                          textSize(50);
+                          text("Click a blue square to restart.", 550,560);
+
+                        }else if (currentTop == 3 && currentBottom == 6) {
+                                console.log("Outfit16");
+                                fill(192, 255, 0);
+                                strokeWeight(10);
+                                rect(475, 400, 1000, 200);
+                                textSize(95);
+                                noStroke();
+                                fill("black");
+                                text("Match!", 800,510);
+                                textSize(50);
+                                text("Click a blue square to restart.", 550,560);
       }else{
 
       fill("red");
@@ -368,7 +448,7 @@ function mousePressed(){
       console.log("Button 3");
       currentBottom = currentBottom - 1;
       if(currentBottom == -1){
-        currentBottom = 7;
+        currentBottom = 8;
       }
     dressMe = false;
   }// end of IF 3
@@ -376,7 +456,7 @@ function mousePressed(){
   if(mouseX > hitX2[1] && mouseX < hitX2[1] + hitSize && mouseY > hitY2[1] && mouseY < hitY2[1] + hitSize){
     console.log("Button 4");
     currentBottom = currentBottom + 1;
-    if(currentBottom == 8){
+    if(currentBottom == 9){
       currentBottom = 0;
     }
     dressMe = false;
