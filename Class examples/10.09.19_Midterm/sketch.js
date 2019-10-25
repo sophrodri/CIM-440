@@ -1,12 +1,15 @@
 //Pictures taken from o-mighty.com
-
   //Tiger top and bottom - https://www.o-mighty.com/products/213/all/10864
   //Red Chain skirt - https://www.o-mighty.com/products/157/all/9504
   //Red Top - https://www.o-mighty.com/products/211/all/11019
   //white tank - https://www.o-mighty.com/products/211/all/11477
   //pink skirt - https://www.o-mighty.com/products/208/all/10687
   //Black Leather skirt - https://www.o-mighty.com/products/157/all/9764
-  //hanger: https://kewlgifs4u.tumblr.com/post/27542334812
+  // angel Top - https://o-mighty.com/products/211/all/11531
+  // angel skirt - https://o-mighty.com/products/208/all/11530
+  // white pants - https://o-mighty.com/products/208/all/11585
+  // yellow skirt - https://o-mighty.com/products/213/all/11168
+  // yellow square skirt and top - https://o-mighty.com/products/213/all/11547
 
 var currentTop = 0;
 
@@ -86,7 +89,7 @@ function preload(){
 
 
 
-  font = loadFont("ChargenFont/6809 chargen.ttf")
+  font = loadFont("ChargenFont/6809chargen.ttf")
   leopardPng = loadImage("Images/LeopardPrint.png")
   cluelessLogo = loadImage("Images/cluelesslogo.png")
 
@@ -465,7 +468,7 @@ function mousePressed(){
   if(mouseX > hitX3[0] && mouseX < hitX3[0] + DressMeSizeW && mouseY > hitY3[0] && mouseY < hitY3[0] + DressMeSizeH){
       console.log("DressMeButton");
 
-        dressMe = true;
+    dressMe = true;
 
     }// end of IF 5
 
