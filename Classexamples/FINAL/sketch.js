@@ -82,6 +82,9 @@ function setup() {
 
   textFont(titlefont);
 
+
+  currentColor = white;
+
 }//end of setup
 
 
@@ -94,11 +97,10 @@ image(capture, 0, 0, width, width * capture.height / capture.width);
 
 if(currentFilter >= 1){
   //draw image
-image(currentColor,0, 0, currentColor.width, currentColor.height);
+image(currentColor,0, 0, width, height);
 }
   // move this into ^
 
-currentColor = white;
 
 console.log("currentFilter" + currentFilter);
 

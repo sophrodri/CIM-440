@@ -1,4 +1,4 @@
-photosoph
+# photosoph - CIM FINAL
 
 I'm making this program as my Final project because I was inspired by many celebrities using photo booth pop ups as their party favors for their get togethers; so why not make my own?
 
