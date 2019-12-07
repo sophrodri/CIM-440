@@ -12,12 +12,13 @@ var titlefont;
 
 
 function preload(){
-white = loadImage("Images/whitefilter.png")
-rainbow = loadImage("Images/rainbowLine2.png")
-peach = loadImage("Images/SunsetGradient.png")
-blue = loadImage("Images/blue.png")
-green = loadImage("Images/GreenGradient.png")
-pink = loadImage("Images/pink.png")
+white = loadImage("Images/whitefilter.png")//white
+rainbow = loadImage("Images/rainbowLine2.png")//rainbow
+peach = loadImage("Images/SunsetGradient.png")//peach
+blue = loadImage("Images/blue.png")//blue
+green = loadImage("Images/GreenGradient.png")//green
+pink = loadImage("Images/pink.png")//pink
+
 titlefont = loadFont("Fonts/Canterbury.ttf")
 }
 
@@ -86,7 +87,6 @@ function setup() {
 
 function draw() {
 
-
 image(capture, 0, 0, width, width * capture.height / capture.width);
   //filter(INVERT);
 //image(FilterSelect[0], 0, 0, width*2, height*2);
@@ -95,11 +95,12 @@ currentColor = white;
 
 if(currentFilter >= 1){
   //draw image
-  image(currentColor,0, 0, width, height);
+image(currentColor,0, 0, width, height);
 }
   // move this into ^
 
 console.log("currentFilter" + currentFilter);
+console.log("currentColor"+ currentColor);
 
 if(currentFilter==1){
   //show white filter
@@ -131,9 +132,11 @@ textSize(30);
 fill("white");
 text("Photobooth by SophRodri",100,950);
 
+image(currentColor,0,0, currentColor.width/4,currentColor.height/4);
+
 }// end of draw
 
-image(currentColor,0,0, currentColor.width/4,currentColor.height/4);
+
 
 function mousePressed(){
   //saveCanvas(cnv, 'myCanvas', 'jpg');
