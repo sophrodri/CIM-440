@@ -91,16 +91,16 @@ image(capture, 0, 0, width, width * capture.height / capture.width);
   //filter(INVERT);
 //image(FilterSelect[0], 0, 0, width*2, height*2);
 
-currentColor = white;
 
 if(currentFilter >= 1){
   //draw image
-image(currentColor,0, 0, width, height);
+image(currentColor,0, 0, currentColor.width, currentColor.height);
 }
   // move this into ^
 
+currentColor = white;
+
 console.log("currentFilter" + currentFilter);
-console.log("currentColor"+ currentColor);
 
 if(currentFilter==1){
   //show white filter
@@ -120,7 +120,11 @@ if(currentFilter==1){
 
 }else if (currentFilter==6){
   currentColor = pink;
+
+
 }
+
+image(currentColor,0,0, currentColor.width,currentColor.height);
 
 noStroke();
 textSize(100);
@@ -131,9 +135,6 @@ noStroke();
 textSize(30);
 fill("white");
 text("Photobooth by SophRodri",100,950);
-
-image(currentColor,0,0, currentColor.width/4,currentColor.height/4);
-
 }// end of draw
 
 
