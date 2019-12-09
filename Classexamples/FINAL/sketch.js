@@ -5,7 +5,7 @@ var whiteButton, rainbowButton, noFilterButton, sunsetButton, greenButton, blueB
 
 var currentFilter = 0;
 
-var currentColor;
+var currentColor = 0;
 
 var titlefont;
 
@@ -13,7 +13,7 @@ var titlefont;
 
 function preload(){
 white = loadImage("Images/whitefilter.png")//white
-rainbow = loadImage("Images/rainbowLine2.png")//rainbow
+rainbow = loadImage("Images/rainbowline.png")//rainbow
 peach = loadImage("Images/SunsetGradient.png")//peach
 blue = loadImage("Images/blue.png")//blue
 green = loadImage("Images/GreenGradient.png")//green
